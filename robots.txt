@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Independent site concept: enable indexing after firm approval.
