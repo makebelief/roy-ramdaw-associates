@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /
-# Independent site concept: enable indexing after firm approval.
+Allow: /
+# Independent preview: the HTML meta robots noindex directive prevents search indexing.
+# Sharing crawlers may fetch the public OG image and page.

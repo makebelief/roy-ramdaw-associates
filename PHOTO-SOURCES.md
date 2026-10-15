@@ -25,3 +25,13 @@ Photos of people depict Black/African legal or business professionals according 
 - https://www.pexels.com/photo/8731036/
 - https://www.pexels.com/photo/8731042/
 - https://www.pexels.com/photo/12911211/
+## Newly added focus-area photographs (unique usage)
+- https://www.pexels.com/photo/31670405/ — illustrative stock photography, Pexels free-use page; not a photograph of firm employees or clients.
+- https://www.pexels.com/photo/7109288/ — illustrative stock photography, Pexels free-use page; not a photograph of firm employees or clients.
+- https://www.pexels.com/photo/8815849/ — illustrative stock photography, Pexels free-use page; not a photograph of firm employees or clients.
+- Social share JPEG combines the existing firm logo and previously supplied attorney portrait, without generating or altering a person’s face.
+
+## Additional unique homepage-only photographs
+- https://www.pexels.com/photo/37684096/ — illustrative image (only used once as page content).
+- https://www.pexels.com/photo/7681077/ — illustrative image (only used once as page content).
+- https://www.pexels.com/photo/8052246/ — illustrative image (only used once as page content).

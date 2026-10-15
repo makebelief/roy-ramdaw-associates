@@ -28,3 +28,17 @@ Professional details sourced from https://www.attorneys.co.za/CompanyHomePage.as
 
 ## Pages
 Home, About Us, Practice Areas, Our Attorney, Insights, Contact, Privacy, Terms, 404.
+
+
+### 15 October 2026 — client instructions update
+
+- Newcastle (29 Bird Street) is the principal/head office; Durban (114C Northway Centre, 17 Kenneth Kuanda Road) is another firm office.
+- Johannesburg is explicitly an associated office with Ramkussan Juglal Inc., Office 7, Arbour Square, 92 Juta Street, Braamfontein. Do not identify it as the head office or an ordinary unqualified firm branch.
+- Dr Anandroy Ramdaw: BProc, QLTT (London), LLD (Hon.). LLD labelled honorary per attorneys.co.za.
+- Specialist focus: Power & Energy Law; African project finance; trusts, foundations and offshore company structures connected with Mauritius.
+- Mauritius / London: Steven & Associates is a professional association; not described as a South African office. An October 2026 trip to Lomé, Togo is not a permanent office.
+- Existing contact email and published phone numbers retained. WhatsApp registration of +27 83 625 9166 not independently confirmed.
+- Form opens an email draft rather than transmitting to a server.
+- Explicit written client instruction and attorneys.co.za directory research are recorded in CLIENT-CHANGELOG.md.
+- A 1200x630 social sharing JPEG places supplied logo alongside Dr Ramdaw's supplied original portrait; full absolute og:image, twitter:image and dimensions on every HTML page. A deployed WhatsApp image preview must still be independently tested.
+- Noindex is retained pending firm approval. robots.txt now allows fetching public HTML for social previews; each HTML page still has meta robots noindex.
