@@ -23,3 +23,14 @@
 - WhatsApp registration for the published mobile number and rights/permission for public client branding.
 - The project is still an independent unindexed demonstration; public SEO indexing is not authorised.
 - The WhatsApp preview should be tested on the Vercel production domain after deployment, including access for social media crawlers and any Vercel deployment protection.
+
+
+### 15 October 2026 — New WhatsApp instructions
+- Prominent labour and employment law
+- Qualifying contingency fee arrangements in employment, personal injury, medical negligence and commercial disputes; statutory safeguards
+- Acting Labour Court judge, former CCMA commissioner (2,500+ matters)
+- Court appearances and High Court pleadings
+- UK/Australian/Mauritius practice credentials and international arbitration
+- Client-supplied 1991 detainee representation history (labelled as such)
+- Support team: Sinduja Bhana, Sakhele Zulu, Lee Baliram, Sanum Essery, Noks Nkosi, Nokubonga Shonge
+- Existing social preview logo + portrait preserved

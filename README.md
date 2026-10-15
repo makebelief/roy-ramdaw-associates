@@ -42,3 +42,7 @@ Home, About Us, Practice Areas, Our Attorney, Insights, Contact, Privacy, Terms,
 - Explicit written client instruction and attorneys.co.za directory research are recorded in CLIENT-CHANGELOG.md.
 - A 1200x630 social sharing JPEG places supplied logo alongside Dr Ramdaw's supplied original portrait; full absolute og:image, twitter:image and dimensions on every HTML page. A deployed WhatsApp image preview must still be independently tested.
 - Noindex is retained pending firm approval. robots.txt now allows fetching public HTML for social previews; each HTML page still has meta robots noindex.
+
+
+## October 15, 2026 — Additional client instructions
+Further updates sourced from supplied WhatsApp export: employment/labour specialism, CCMA and Labour Court experience, courts and litigation, contingency-fee enquiries, team personnel, international admissions and historical representation claims. The 1991 political detainee claim is attributed to the client and must be corroborated before public endorsement. Contingency fees are subject to the Contingency Fees Act 66 of 1997 and a compliant written agreement; no guarantee of outcomes. Team names and qualifications were supplied by the firm; independent verification pending.
