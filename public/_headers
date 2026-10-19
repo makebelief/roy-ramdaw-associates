@@ -1,0 +1,17 @@
+# Cloudflare Pages static asset headers. Verify via curl after deployment.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' mailto:; frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.pexels.com; frame-src https://www.google.com; connect-src 'self'; upgrade-insecure-requests
+
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# The Cloudflare-hosted duplicate URL must not compete in Search.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
