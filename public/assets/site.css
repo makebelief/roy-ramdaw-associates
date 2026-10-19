@@ -135,3 +135,28 @@ body{color:var(--ink)}.topbar{background:#0a3156;color:#eaf4ff}.topbar svg{color
 .office-map-card p{font-size:14px;margin:0 0 14px;line-height:1.7}
 .office-map-card iframe{display:block;width:100%;height:300px;border:0}
 @media(max-width:740px){.office-map-grid{grid-template-columns:1fr}.office-map-card{padding:16px}.office-map-card iframe{height:260px}}
+
+/* Optimized mobile hero image */
+@media (max-width: 600px) {
+  .hero::before {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(6,27,52,.93),
+        rgba(7,36,67,.72)
+      ),
+      url('https://images.pexels.com/photos/5668508/pexels-photo-5668508.jpeg?auto=compress&cs=tinysrgb&w=900');
+  }
+}
+
+/* Accessibility contrast improvements 2026 */
+
+/* Improve numbered labels against light backgrounds */
+.value-grid > div > span {
+    color: #425c16;
+}
+
+/* Improve footer description readability */
+.site-footer .footer-grid > div:first-child > p {
+    color: #d7e2ef;
+}

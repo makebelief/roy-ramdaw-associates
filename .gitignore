@@ -4,3 +4,6 @@ node_modules
 *.log
 
 .env.local
+
+# Cloudflare local deployment files
+.wrangler/
