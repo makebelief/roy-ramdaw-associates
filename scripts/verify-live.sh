@@ -10,7 +10,10 @@ fetch_status() {
   echo "$status  $url"
   [[ "$status" == "$expected" ]] || { echo "FAILED: expected $expected" >&2; exit 1; }
 }
-for p in '/' '/about/' '/practice-areas/' '/managing-partner/' '/insights/' '/contact/' '/robots.txt' '/sitemap.xml' '/assets/roy-ramdaw-social-preview-2026.jpg'; do
+for p in '/' '/about/' '/practice-areas/' '/managing-partner/' '/insights/' '/contact/' \
+  '/labour-employment-law/' '/unfair-dismissal/' '/ccma-representation/' \
+  '/retrenchment-employment-disputes/' '/labour-court/' '/employment-contracts-disciplinary/' \
+  '/robots.txt' '/sitemap.xml' '/assets/roy-ramdaw-social-preview-2026.jpg'; do
   fetch_status "$BASE$p" 200
 done
 fetch_status "$BASE/this-route-should-not-exist-roy-test" 404

@@ -8,7 +8,9 @@ import json, re, sys
 
 root=Path(__file__).resolve().parents[1]/'public'
 domain='https://royramdaw.co.za'
-indexable={'/','/about/','/practice-areas/','/managing-partner/','/insights/','/contact/'}
+indexable={'/','/about/','/practice-areas/','/managing-partner/','/insights/','/contact/',
+           '/labour-employment-law/','/unfair-dismissal/','/ccma-representation/',
+           '/retrenchment-employment-disputes/','/labour-court/','/employment-contracts-disciplinary/'}
 errors=[]
 warnings=[]
 class Page(HTMLParser):
@@ -29,6 +31,8 @@ class Page(HTMLParser):
 
 def issue(msg):errors.append(msg)
 pages={}
+titles={}
+descriptions={}
 for f in sorted(root.rglob('*.html')):
     rel=f.relative_to(root).as_posix()
     url='/' if rel=='index.html' else '/'+rel if rel=='404.html' else '/'+rel[:-len('index.html')]
@@ -38,21 +42,33 @@ for f in sorted(root.rglob('*.html')):
     pages[url]=p
     if len(p.headings)!=1:issue(f'{url}: expected one h1, found {len(p.headings)}')
     if not 16<len(p.title)<95:issue(f'{url}: invalid title length {len(p.title)}')
+    if p.title in titles:issue(f'{url}: duplicate title with {titles[p.title]}')
+    titles[p.title]=url
     for tag,a in p.items:
         if tag=='img' and not a.get('alt'):issue(f'{url}: image without alt')
         if tag in ('script','link') and a.get('src','').startswith('http'):
             warnings.append(f'{url}: external script')
     metas={a.get('name') or a.get('property'):a.get('content') for tag,a in p.items if tag=='meta'}
     if len(metas.get('description',''))<70:issue(f'{url}: missing/short description')
+    if metas.get('description') in descriptions:issue(f'{url}: duplicate description with {descriptions[metas.get("description")]}')
+    descriptions[metas.get('description')]=url
+    if url in indexable and 'index' not in metas.get('robots',''):issue(f'{url}: missing index directive')
     if 'noindex' in metas.get('robots','') and url in indexable:issue(f'{url}: indexing blocked')
     if 'noindex' not in metas.get('robots','') and url not in indexable:issue(f'{url}: expected noindex')
     canonicals=[a.get('href') for tag,a in p.items if tag=='link' and 'canonical' in a.get('rel','').split()]
     if canonicals!=[domain+url]:issue(f'{url}: canonical {canonicals} != {domain+url}')
     if metas.get('og:url')!=domain+url:issue(f'{url}: og:url does not match canonical')
+    if not metas.get('og:title') or not metas.get('og:description'):issue(f'{url}: incomplete Open Graph metadata')
     if not metas.get('og:image','').startswith(domain+'/assets/'):issue(f'{url}: missing first-party OG image')
+    data=[]
     for entry in p.scripts:
-        try: json.loads(entry)
+        try: data.append(json.loads(entry))
         except Exception as exc:issue(f'{url}: JSON-LD malformed: {exc}')
+    if url in indexable and not any(d.get('@type')=='LegalService' or any(x.get('@type')=='LegalService' for x in d.get('@graph',[])) for d in data):
+        issue(f'{url}: missing LegalService structured data')
+    if url in indexable and url not in {'/','/about/','/practice-areas/','/managing-partner/','/insights/','/contact/'}:
+        if not any(any(x.get('@type')=='Service' and x.get('provider',{}).get('@id')==domain+'/#legal-service' for x in d.get('@graph',[])) for d in data):
+            issue(f'{url}: missing linked Service structured data')
     if 'roy-ramdaw-associates.vercel.app' in f.read_text():issue(f'{url}: stale Vercel URL')
 
 for url,p in pages.items():
