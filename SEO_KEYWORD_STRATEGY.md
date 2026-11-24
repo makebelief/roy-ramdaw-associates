@@ -39,12 +39,19 @@ The firm's recorded head office is **29 Bird Street, Newcastle, KwaZulu-Natal**;
 | CCMA lawyer Newcastle | nearby CCMA advice | C | `/ccma-representation/` | L | P1 |
 | labour law attorney Newcastle KZN | local legal service | S | `/labour-employment-law/` | L | P1 |
 | unfair dismissal lawyer Newcastle | local dismissal help | S | `/unfair-dismissal/` | L | P1 |
+| labour lawyer Durban | counsel near the verified Durban office | C | `/labour-employment-law/` | U | P1 |
+| employment attorney Durban | local employment advice | C | `/labour-employment-law/` | U | P1 |
+| labour lawyer Johannesburg | employment enquiry via the associated office | C | `/labour-employment-law/` | U | P2 |
+| no win no fee labour lawyer | ask whether a contingency fee may be available | C | `/labour-employment-law/` | U | P2 |
+| no win no pay labour lawyer | ask whether a contingency fee may be available | C | `/labour-employment-law/` | U | P2 |
 | power and energy law attorney South Africa | energy project counsel | C | `/practice-areas/#energy` | U | P2 |
 | African project finance legal advice | transactional counsel | C | `/practice-areas/#project-finance` | U | P2 |
 | international arbitration attorney South Africa | dispute counsel | C | `/practice-areas/#arbitration` | U | P2 |
 | conveyancing attorney Newcastle | property transfer help | S | `/practice-areas/#property` | L | P2 |
 
 The final four service groups appear in the existing practice index and client-provided profile. New dedicated pages for them would need a separate content and demand review. “Employment discrimination lawyer” is retained as a secondary term because employment equity appears in the existing practice page; it must not imply unverified specialist results. The site should use natural wording, not repeat every variant on a page.
+
+**Client feedback, 23 November 2026:** Dr Ramdaw asked about “no win no pay labour lawyers” or “labour lawyers” in Durban, Newcastle and Johannesburg. The primary labour page now names the two verified firm offices and accurately describes the Johannesburg association. The fee question is answered conditionally on that page; it is not a blanket “no win, no fee” promise. No additional city landing pages are proposed.
 
 ## Long-tail opportunities and content path
 

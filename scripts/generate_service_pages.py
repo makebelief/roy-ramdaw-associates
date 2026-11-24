@@ -28,7 +28,15 @@ PAGES = [
     dict(slug="employment-contracts-disciplinary", title="Employment Contracts & Disciplinary Advice | Roy Ramdaw", description="Employment contract reviews and disciplinary matter advice from Roy Ramdaw & Associates Inc. in Newcastle, KZN. Understand documents, process and possible dispute routes.", h1="Employment Contracts and Disciplinary Matters", intro="Clear employment terms and fair workplace processes can prevent avoidable disputes. Roy Ramdaw & Associates Inc. lists employment contracts, disciplinary proceedings and workplace investigations among its labour services. The firm can review the relevant documents and advise on a proportionate response for an employer or employee.", sections=[("Employment contracts", "Contracts may address duties, pay, working time, confidentiality, notice and dispute procedures. Their effect must be read with applicable legislation, collective agreements and workplace policies. The firm can review proposed terms or a disagreement about existing obligations and identify points needing clarification.", ["Check the signed contract and later variations", "Compare relevant policies and collective agreements", "Identify the disputed term and practical objective"]), ("Disciplinary processes", "A disciplinary issue may call for investigation, notice of allegations, an opportunity to respond and a reasoned decision. The applicable requirements depend on the facts and current law. The firm can advise on preparation, records, procedural fairness and what steps may follow an outcome. It should not be assumed that every hearing allows an outside attorney to appear.", ["Keep notices, evidence and hearing records", "Record dates and persons involved", "Seek advice before a time-sensitive response or referral"]), ("Where a dispute follows", "If a process ends in dismissal or another contested workplace decision, the forum and deadline depend on the claim. The firm can assess whether negotiation, an internal process, a bargaining council, the CCMA or litigation is appropriate.", [])], source=LRA),
 ]
 
-related = [(p["slug"], p["h1"]) for p in PAGES]
+PAGES[0]["title"] = "Labour & Employment Lawyers in Newcastle & Durban | Roy Ramdaw"
+PAGES[0]["description"] = ("Labour and employment law advice from Roy Ramdaw & Associates Inc. in Newcastle and Durban. "
+                           "Johannesburg enquiries can be coordinated through an associated office.")
+PAGES[0]["h1"] = "Labour & Employment Lawyers in Newcastle and Durban"
+PAGES[0]["intro"] = ("Roy Ramdaw & Associates Inc. assists employers and employees from its Newcastle head office "
+                      "and Durban office, with Johannesburg enquiries coordinated through its associated office. "
+                      "The practice covers workplace disputes, CCMA and bargaining councils, contracts and Labour Court proceedings. "
+                      "Contact the firm to identify the appropriate forum and any urgent time limit.")
+related = [(p["slug"], "Labour & Employment Law" if p["slug"] == "labour-employment-law" else p["h1"]) for p in PAGES]
 for p in PAGES:
     url = f'{BASE}/{p["slug"]}/'
     title, description = escape(p["title"]), escape(p["description"])
@@ -43,6 +51,15 @@ for p in PAGES:
     for heading, paragraph, bullets in p["sections"]:
         body += f'<h2>{escape(heading)}</h2><p>{escape(paragraph)}</p>'
         if bullets: body += '<ul>'+''.join(f'<li>{escape(item)}</li>' for item in bullets)+'</ul>'
+    if p["slug"] == "labour-employment-law":
+        body += ('<h2>Newcastle, Durban and Johannesburg enquiries</h2>'
+                 '<p>From its Newcastle head office and Durban office, the firm assists with South African employment matters. '
+                 'Johannesburg enquiries may be coordinated through its associated office with Ramkussan Juglal Inc. '
+                 'See the <a href="/contact/#office-locations">office and association details</a> and contact the firm to confirm arrangements for your matter.</p>'
+                 '<h2 id="contingency-fees">Are “no win, no fee” arrangements available?</h2>'
+                 '<p>The firm considers contingency-fee arrangements for qualifying employment disputes. They are not automatic: eligibility depends on the matter, the firm’s assessment and a written agreement that complies with the '
+                 '<a href="https://www.gov.za/sites/default/files/gcis_document/201409/a66-97.pdf" rel="noopener noreferrer" target="_blank">Contingency Fees Act 66 of 1997 ↗</a>. '
+                 'Ask the office to explain fees and any other costs before agreeing to proceed. No outcome is guaranteed.</p>')
     body += f'<p><strong>Source:</strong> <a href="{p["source"]}" rel="noopener noreferrer" target="_blank">Official South African labour guidance and legislation ↗</a>. This is general information, not advice on a particular matter.</p>'
     body += '<p>Read about <a href="/managing-partner/">Dr Anandroy Ramdaw’s experience</a> or <a href="/insights/">browse legal insights</a>.</p></div></section>'
     body += '<section class="section cream"><div class="container"><div class="section-heading centered"><span class="eyebrow">RELATED EMPLOYMENT SERVICES</span><h2>Find the right starting point.</h2></div><div class="jump-chips">'

@@ -34,3 +34,9 @@
 - Client-supplied 1991 detainee representation history (labelled as such)
 - Support team: Sinduja Bhana, Sakhele Zulu, Lee Baliram, Sanum Essery, Noks Nkosi, Nokubonga Shonge
 - Existing social preview logo + portrait preserved
+
+### 23 November 2026 — Labour SEO follow-up
+
+Dr Ramdaw asked whether the website should say “no win no pay labour lawyers” or simply “labour lawyers” for Durban, Newcastle and Johannesburg. The November 24 update uses labour-law wording for the verified Newcastle head office and Durban firm office and identifies Johannesburg as an associated office with Ramkussan Juglal Inc. The labour page explains that contingency-fee arrangements are considered only for qualifying employment disputes, subject to assessment and a compliant written agreement. It does not promise an arrangement or an outcome. The legal reference is the [Contingency Fees Act 66 of 1997](https://www.gov.za/sites/default/files/gcis_document/201409/a66-97.pdf).
+
+The earlier demonstration/noindex notes above were superseded by the client's explicit November 23 production authorization and the subsequent deployment of the indexable Cloudflare site.
